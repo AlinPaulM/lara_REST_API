@@ -11,7 +11,7 @@ KEY APPLICATION CREATION STEPS
 
 -php artisan make:model Album -m
 -php artisan make:model ImageManipulation -m
-
+-php artisan make:controller AlbumController --model=Album --requests --api
 
 
 --------------

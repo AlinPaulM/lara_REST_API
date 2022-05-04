@@ -22,8 +22,8 @@ return new class extends Migration
             $table->string('output_path', 2000);
             $table->timestamp('created_at');
 
-            $table->foreignIdFor(\App\Models\User::class, 'user_id');
-            $table->foreignIdFor(\App\Models\Album::class, 'album_id');
+            $table->foreignIdFor(\App\Models\User::class, 'user_id')->constrained('users');
+            $table->foreignIdFor(\App\Models\Album::class, 'album_id')->constrained('albums');
         });
     }
 

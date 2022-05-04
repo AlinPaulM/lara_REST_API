@@ -10,6 +10,7 @@ KEY APPLICATION CREATION STEPS
 -use phpmyadmin or whatever you want to create a database with the configuration found in .env.example (e.g. on a standard WAMP, all configuration is as in .env.example, so just create a "lara_rest_api" database in phpmyadmin)
 
 -php artisan make:model Album -m
+php artisan make:model ImageManipulation -m
 
 
 

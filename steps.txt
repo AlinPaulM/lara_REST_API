@@ -1,0 +1,21 @@
+FULL APPLICATION CREATION STEPS
+---------------------------------
+(project created with laravel 9.10.1, php 8.1.1, mysql 5.7.31)
+
+-to install the latest version of laravel, make sure your pc(your terminal) is set up to use the php version required by the latest version of laravel(otherwise you will not get the latest version of laravel)
+-install laravel using composer, run "composer create-project laravel/laravel myAppName"
+
+-the .env config file can't be commited, we can't store credentials in our code(for obvious security reasons). But for the purpose of this app, i'll store all configuration in .env.example, so that when i run the "cp .env.example .env" step from the installation INSTRUCTIONS(from Readme.md), it'll copy all configuration to .env
+
+-use phpmyadmin or whatever you want to create a database with the configuration found in .env.example (e.g. on a standard WAMP, all configuration is as in .env.example, so just create a "lara_rest_api" database in phpmyadmin)
+
+(-he ran "php artisan migrate")
+-php artisan make:model Album -m
+
+
+
+--------------
+LINKS
+https://laravel.com/docs/9.x/controllers#resource-controllers
+    https://laravel.com/docs/9.x/controllers#api-resource-routes
+https://laravel.com/docs/9.x/eloquent-resources Eloquent: API Resources

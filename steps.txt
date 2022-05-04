@@ -1,4 +1,4 @@
-FULL APPLICATION CREATION STEPS
+KEY APPLICATION CREATION STEPS
 ---------------------------------
 (project created with laravel 9.10.1, php 8.1.1, mysql 5.7.31)
 
@@ -9,7 +9,6 @@ FULL APPLICATION CREATION STEPS
 
 -use phpmyadmin or whatever you want to create a database with the configuration found in .env.example (e.g. on a standard WAMP, all configuration is as in .env.example, so just create a "lara_rest_api" database in phpmyadmin)
 
-(-he ran "php artisan migrate")
 -php artisan make:model Album -m
 
 

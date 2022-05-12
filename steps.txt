@@ -13,7 +13,9 @@ KEY APPLICATION CREATION STEPS
 -php artisan make:model ImageManipulation -m
 -php artisan make:controller AlbumController --model=Album --requests --api
 
-
+versioning
+-create apiResource route for album, with v1 prefix
+-php artisan make:resource V1\\AlbumResource
 --------------
 LINKS
 https://laravel.com/docs/9.x/controllers#resource-controllers

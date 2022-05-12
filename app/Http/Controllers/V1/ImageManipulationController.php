@@ -42,18 +42,6 @@ class ImageManipulationController extends Controller
     }
 
     /**
-     * Update the specified resource in storage.
-     *
-     * @param  \App\Http\Requests\UpdateImageManipulationRequest  $request
-     * @param  \App\Models\ImageManipulation  $imageManipulation
-     * @return \Illuminate\Http\Response
-     */
-    public function update(UpdateImageManipulationRequest $request, ImageManipulation $imageManipulation)
-    {
-        //
-    }
-
-    /**
      * Remove the specified resource from storage.
      *
      * @param  \App\Models\ImageManipulation  $imageManipulation

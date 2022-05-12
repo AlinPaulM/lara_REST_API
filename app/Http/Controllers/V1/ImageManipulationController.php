@@ -4,6 +4,7 @@ namespace App\Http\Controllers\V1;
 
 use App\Http\Controllers\Controller;
 use App\Models\ImageManipulation;
+use App\Models\Album;
 use App\Http\Requests\ResizeImageRequest;
 
 class ImageManipulationController extends Controller
@@ -36,6 +37,17 @@ class ImageManipulationController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show(ImageManipulation $imageManipulation)
+    {
+        //
+    }
+
+    /**
+     * Display the specified resource by album.
+     *
+     * @param  \App\Models\Album $album
+     * @return \Illuminate\Http\Response
+     */
+    public function byAlbum(Album $album)
     {
         //
     }

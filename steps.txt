@@ -16,6 +16,14 @@ KEY APPLICATION CREATION STEPS
 versioning
 -create apiResource route for album, with v1 prefix
 -php artisan make:resource V1\\AlbumResource
+-add V1 folder(manually, just cuz it was created wo versioning folder with the make:controller command) under app\Http\Controllers, move AlbumController.php in it, update AlbumController.php and routes\api.php to use the new V1
+
+
+
+
+
+
+
 --------------
 LINKS
 https://laravel.com/docs/9.x/controllers#resource-controllers

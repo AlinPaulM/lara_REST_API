@@ -19,5 +19,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::prefix('v1')->group(function(){
-    Route::apiResource('album', \App\Http\Controllers\AlbumController::class);
+    Route::apiResource('album', \App\Http\Controllers\V1\AlbumController::class);
 });

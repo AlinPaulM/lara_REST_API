@@ -20,6 +20,8 @@ versioning
 
 -php artisan make:controller V1\\ImageManipulationController --model=ImageManipulation --requests --api
 -php artisan make:resource V1\\ImageManipulationResource
+-delete ImageManipulationController's update(), delete UpdateImageManipulationRequest.php - cuz we don't have update support for this
+-rename StoreImageManipulationRequest to ResizeImageRequest, update ImageManipulationController to reflect this, rename its store() to resize()
 
 
 

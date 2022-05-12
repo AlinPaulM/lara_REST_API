@@ -13,7 +13,7 @@ class ResizeImageRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -23,8 +23,20 @@ class ResizeImageRequest extends FormRequest
      */
     public function rules()
     {
-        return [
-            //
+        $rules = [
+            'image' => ['required'],
+            'w' => ['required', 'regex:/^d+(\.\d+)?%?$/'], // e.g. 50, 50%, 50.123, 50.123%
+            'h' => 'regex:/^d+(\.\d+)?%?$/',
+            'album_id' => 'exists:\App\Models\Album,id'
         ];
+
+        $image = $this->all()['image'] ?? false;
+        if($image && $image instanceof \Illuminate\Http\UploadedFile) {
+            $rules['image'][] = 'image'; // https://laravel.com/docs/9.x/validation#rule-image
+        } else {
+            $rules['image'][] = 'url'; // https://laravel.com/docs/9.x/validation#rule-url
+        }
+
+        return $rules;
     }
 }

@@ -9,6 +9,7 @@ use App\Http\Requests\ResizeImageRequest;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\File;
 use Intervention\Image\Facades\Image;
+use App\Http\Resources\V1\ImageManipulationResource;
 
 class ImageManipulationController extends Controller
 {
@@ -19,7 +20,7 @@ class ImageManipulationController extends Controller
      */
     public function index()
     {
-        //
+        return ImageManipulationResource::collection(ImageManipulation::paginate());
     }
 
     /**
@@ -87,18 +88,19 @@ class ImageManipulationController extends Controller
         # create ImageManipulation db record
         $imageManipulation = ImageManipulation::create($data);
 
-        return $imageManipulation;
+        // return $imageManipulation;
+        return new ImageManipulationResource($imageManipulation);
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\ImageManipulation  $imageManipulation
+     * @param  \App\Models\ImageManipulation  $image
      * @return \Illuminate\Http\Response
      */
-    public function show(ImageManipulation $imageManipulation)
+    public function show(ImageManipulation $image)
     {
-        //
+        return new ImageManipulationResource($image);
     }
 
     /**
@@ -109,18 +111,21 @@ class ImageManipulationController extends Controller
      */
     public function byAlbum(Album $album)
     {
-        //
+        $where = ['album_id' => $album->id];
+        return ImageManipulationResource::collection(ImageManipulation::where($where)->paginate());
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\ImageManipulation  $imageManipulation
+     * @param  \App\Models\ImageManipulation  $image
      * @return \Illuminate\Http\Response
      */
-    public function destroy(ImageManipulation $imageManipulation)
+    public function destroy(ImageManipulation $image)
     {
-        //
+        $image->delete();
+
+        return response('', 204);
     }
 
     /**

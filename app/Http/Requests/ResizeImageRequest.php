@@ -25,8 +25,8 @@ class ResizeImageRequest extends FormRequest
     {
         $rules = [
             'image' => ['required'],
-            'w' => ['required', 'regex:/^d+(\.\d+)?%?$/'], // e.g. 50, 50%, 50.123, 50.123%
-            'h' => 'regex:/^d+(\.\d+)?%?$/',
+            'w' => ['required', 'regex:/^\d+(\.\d+)?%?$/'], // e.g. 50, 50%, 50.123, 50.123%
+            'h' => 'regex:/^\d+(\.\d+)?%?$/',
             'album_id' => 'exists:\App\Models\Album,id'
         ];
 

@@ -1,5 +1,5 @@
-LaraCRM
---------
+Lara_REST_API - Laravel REST API
+---------------------------------
 
 SETUP INSTRUCTIONS(for local env):  
 -use phpmyadmin/etc to create a database with the configuration found in .env.example(i.e. see the DB_* rows)  (e.g. on a standard WAMP, all configuration is as in .env.example, so just create a "laracrm" database in phpmyadmin)  

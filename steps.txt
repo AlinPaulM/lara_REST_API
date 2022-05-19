@@ -33,8 +33,9 @@ KEY APPLICATION CREATION STEPS
     -npm install (https://www.stackchief.com/tutorials/npm%20install%20%7C%20how%20it%20works)
     -npm run dev (https://laracasts.com/discuss/channels/javascript/what-is-the-difference-between-npm-run-dev-and-npm-run-production)
 
--Laravel Sanctum(see the git commits)
+-Laravel Sanctum - token based authentication
 
+-authorization
 --------------
 LINKS
 https://laravel.com/docs/9.x/controllers#resource-controllers

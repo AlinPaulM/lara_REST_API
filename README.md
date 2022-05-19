@@ -1,1 +1,1 @@
-Work in progress
+Done(i will create full installation instructions next)
